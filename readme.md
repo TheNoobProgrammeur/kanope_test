@@ -3,9 +3,14 @@
 
 ## Start App
 
-Un docker-commpose permet de lancer la stack.
+Un docker-commpose permet de lancer la stack. Il permet de faire un provisioning des utilisateur.  
+Si vous ne voulais pas utiliser un docker crée une db `testKanope` dans un serber mongodb est enregisdre le doc `db/user_provisioning.json` dans un collection `users`
+ 
+Commande:
 
-Commande: `docker-compose up -d`
+```bash
+docker-compose up -d
+```
 
 Si vous voulez lancer l'application separement changer l'address de connection de l'api a la db dans le fichier suivent :
 - `api/src/services/mongoose.service.ts`
@@ -102,7 +107,7 @@ exemple retour
 
 ### Rooter
 
-Route: `/rooter`
+Route: `/rooter`  
 Authorization: Bearer Token
 
 #### Get
@@ -112,7 +117,7 @@ exemple de retour
 [
     {
         "_id": "62434fcf6916ded37f3ad766",
-        "name": "UNDEFINED",
+        "name": "Name rooter",
         "imei": "866802022363388",
         "sensorTable": [
             {
@@ -166,7 +171,7 @@ exemple de retour
 
 ### Sensor
 
-Route: `/sensor`
+Route: `/sensor`  
 Authorization: Bearer Token
 
 #### Get
@@ -176,7 +181,7 @@ exemple de retour
 [
     {
         "_id": "62434fcf6916ded37f3ad76a",
-        "name": "UNDEFINED",
+        "name": "Name sensor",
         "macAddress": "d5:ab:87:e0:23:4b",
         "dataStatements": [
             {
