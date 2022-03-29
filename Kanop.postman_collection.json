@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "d8e1f36b-0dfc-4094-8b5b-25be19925760",
+		"name": "Kanop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "callback",
+					"item": [
+						{
+							"name": "create Data",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"imei\": \"866802022363388\",\n    \"devices\": {\n        \"d5:ab:87:e0:23:4b\": {\n            \"rssi\": -30,\n            \"data\": \"0201040319430409094f524d41524556310d032e09ad080a0afd03\"\n        }\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3030/callback",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"callback"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "root",
+					"item": [
+						{
+							"name": "update name",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"imei\": \"866802022363388\",\n    \"newName\": \"New Name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3030/rooter",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"rooter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create rooter",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"imei\": \"866802022363388\",\n    \"name\": \"js suis un test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3030/rooter",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"rooter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all rooter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3030/rooter",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"rooter"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Sensor",
+					"item": [
+						{
+							"name": "update name",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"macAddress\": \"d5:cc:87:e0:23:8d\",\n    \"newName\": \"New Name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3030/sensor",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"sensor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create Sensor",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"macAddress\": \"d5:cc:87:e0:23:9a\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3030/sensor",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"sensor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all sensor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3030/sensor",
+									"host": [
+										"localhost"
+									],
+									"port": "3030",
+									"path": [
+										"sensor"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"jford@gmail.com\",\n    \"password\": \"passwordTwo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api.url}}/auth",
+									"host": [
+										"{{api.url}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "Get all User",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api.url}}/user",
+									"host": [
+										"{{api.url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userName\": \"UserTest\",\n    \"email\": \"mail@test.com\",\n    \"password\": \"Kanop\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api.url}}/user",
+									"host": [
+										"{{api.url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{api.token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api.url",
+			"value": "localhost:3030",
+			"type": "string"
+		},
+		{
+			"key": "api.token",
+			"value": "SUPER_SECURE_TOKEN",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "userName": "Joe Smith",
+    "email": "jsmith@gmail.com",
+    "password": "passwordOne#sel#hash"
+  },
+  {
+    "userName": "Jen Ford",
+    "email": "jford@gmail.com",
+    "password": "passwordTwo#sel#hash"
+  }
+]
