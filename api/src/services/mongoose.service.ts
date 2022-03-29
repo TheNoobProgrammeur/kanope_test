@@ -16,7 +16,7 @@ export class MongooseService {
     }
 
     public async connection() {
-        await this.mongoose.connect('mongodb://localhost:27017/testKanope')
+        await this.mongoose.connect('mongodb://mongodb:27017/testKanope')
             .catch((error: any) => console.error(error));
     }
 
